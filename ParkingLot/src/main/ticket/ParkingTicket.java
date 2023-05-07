@@ -1,6 +1,7 @@
 package main.ticket;
 
 import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDateTime;
 
 import main.enums.ParkingTicketStatus;
 
@@ -8,6 +9,7 @@ public class ParkingTicket {
 	private String ticketNumber;
 	private ParkingTicketStatus status;
 	private LocalDateTime issuedAt;
+	private LocalDateTime expiredAt;
 	
 	public ParkingTicket(String ticketNumber) {
 		this.ticketNumber = ticketNumber;
@@ -38,5 +40,14 @@ public class ParkingTicket {
 	public void setIssuedAt(LocalDateTime issuedAt) {
 		this.issuedAt = issuedAt;
 	}
+	
+	public LocalDateTime getExpiredAt() {
+		return expiredAt;
+	}
+	
+	public void setExpiredAt(LocalDateTime expiredAt) {
+		this.expiredAt=expiredAt;
+	}
+	
 	
 }
