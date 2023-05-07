@@ -6,14 +6,13 @@ import main.enums.ParkingTicketStatus;
 
 public class ParkingTicket {
 	private String ticketNumber;
-	private LocalDateTime payedAt;
-	private double payedAmount;
 	private ParkingTicketStatus status;
-
-	public ParkingTicket(String ticketNumber, double payedAmount, ParkingTicketStatus status) {
+	private LocalDateTime issuedAt;
+	
+	public ParkingTicket(String ticketNumber) {
 		this.ticketNumber = ticketNumber;
-		this.payedAmount = payedAmount;
-		this.status = status;
+		this.status = ParkingTicketStatus.ACTIVE;
+		this.issuedAt = LocalDateTime.now();
 	}
 
 	public String getTicketNumber() {
@@ -24,22 +23,6 @@ public class ParkingTicket {
 		this.ticketNumber = ticketNumber;
 	}
 
-	public LocalDateTime getPayedAt() {
-		return payedAt;
-	}
-
-	public void setPayedAt(LocalDateTime payedAt) {
-		this.payedAt = payedAt;
-	}
-
-	public double getPayedAmount() {
-		return payedAmount;
-	}
-
-	public void setPayedAmount(double payedAmount) {
-		this.payedAmount = payedAmount;
-	}
-
 	public ParkingTicketStatus getStatus() {
 		return status;
 	}
@@ -47,4 +30,13 @@ public class ParkingTicket {
 	public void setStatus(ParkingTicketStatus status) {
 		this.status = status;
 	}
+
+	public LocalDateTime getIssuedAt() {
+		return issuedAt;
+	}
+
+	public void setIssuedAt(LocalDateTime issuedAt) {
+		this.issuedAt = issuedAt;
+	}
+	
 }

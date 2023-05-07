@@ -1,5 +1,5 @@
 package main.enums;
 
 public enum VehicleType {
-	CAR, TRUCK, ELECTRIC, VAN, MOTORBIKE
+	CAR, TRUCK, ELECTRIC, MOTORBIKE
 }

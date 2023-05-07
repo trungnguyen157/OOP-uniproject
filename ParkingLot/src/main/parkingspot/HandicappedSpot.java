@@ -3,7 +3,7 @@ package main.parkingspot;
 import main.enums.ParkingSpotType;
 
 public class HandicappedSpot extends ParkingSpot {
-	public HandicappedSpot() {
-		super(ParkingSpotType.HANDICAPPED);
+	public HandicappedSpot(String number) {
+		super(number, ParkingSpotType.HANDICAPPED);
 	}
 }

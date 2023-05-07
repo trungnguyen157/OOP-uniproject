@@ -8,10 +8,9 @@ public abstract class Vehicle {
 	private final VehicleType type;
 	private ParkingTicket ticket;
 
-	public Vehicle(String licenseNumber, VehicleType type, ParkingTicket ticket) {
+	public Vehicle(String licenseNumber, VehicleType type) {
 		this.licenseNumber = licenseNumber;
 		this.type = type;
-		this.ticket = ticket;
 	}
 
 	public String getLicenseNumber() {
@@ -24,10 +23,6 @@ public abstract class Vehicle {
 
 	public ParkingTicket getTicket() {
 		return ticket;
-	}
-
-	public void setTicket(ParkingTicket ticket) {
-		this.ticket = ticket;
 	}
 
 	public VehicleType getType() {

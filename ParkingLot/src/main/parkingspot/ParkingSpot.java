@@ -9,11 +9,10 @@ public abstract class ParkingSpot {
 	private Vehicle vehicle;
 	private final ParkingSpotType type;
 
-	public ParkingSpot(String number, boolean free, Vehicle vehicle, ParkingSpotType type) {
+	public ParkingSpot(String number, ParkingSpotType type) {
 		this.number = number;
-		this.free = free;
-		this.vehicle = vehicle;
 		this.type = type;
+		free = true;
 	}
 
 	public String getNumber() {
@@ -28,24 +27,12 @@ public abstract class ParkingSpot {
 		return free;
 	}
 
-	public void setFree(boolean free) {
-		this.free = free;
-	}
-
 	public Vehicle getVehicle() {
 		return vehicle;
 	}
 
-	public void setVehicle(Vehicle vehicle) {
-		this.vehicle = vehicle;
-	}
-
 	public ParkingSpotType getType() {
 		return type;
-	}
-
-	public ParkingSpot(ParkingSpotType type) {
-		this.type = type;
 	}
 
 	public void assignVehicle(Vehicle vehicle) {

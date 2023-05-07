@@ -65,40 +65,41 @@ public class ParkingDisplayBoard {
 
 	public void showEmptySpotNumber() {
 		String message = "";
-		if (handicappedFreeSpot.isFree()) {
+		if (handicappedFreeSpot != null && handicappedFreeSpot.isFree()) {
 			message += "Free Handicapped: " + handicappedFreeSpot.getNumber();
 		} else {
 			message += "Handicapped is full";
 		}
 		message += System.lineSeparator();
 
-		if (compactFreeSpot.isFree()) {
+		if (compactFreeSpot != null && compactFreeSpot.isFree()) {
 			message += "Free Compact: " + compactFreeSpot.getNumber();
 		} else {
 			message += "Compact is full";
 		}
 		message += System.lineSeparator();
 
-		if (largeFreeSpot.isFree()) {
+		if (largeFreeSpot != null && largeFreeSpot.isFree()) {
 			message += "Free Large: " + largeFreeSpot.getNumber();
 		} else {
 			message += "Large is full";
 		}
 		message += System.lineSeparator();
 
-		if (motorbikeFreeSpot.isFree()) {
+		if (motorbikeFreeSpot != null && motorbikeFreeSpot.isFree()) {
 			message += "Free Motorbike: " + motorbikeFreeSpot.getNumber();
 		} else {
 			message += "Motorbike is full";
 		}
 		message += System.lineSeparator();
 
-		if (electricFreeSpot.isFree()) {
+		if (electricFreeSpot != null && electricFreeSpot.isFree()) {
 			message += "Free Electric: " + electricFreeSpot.getNumber();
 		} else {
 			message += "Electric is full";
 		}
 
 		System.out.println(message);
+		System.out.println();
 	}
 }
